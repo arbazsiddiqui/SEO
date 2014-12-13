@@ -23,7 +23,7 @@ import java.io.*;
 public class StopWords 
 {
 	
-	
+	//Stores all the Stop words from a text file into an Arraylist
 	public static ArrayList loadStopWords()
 	{
 		List<String> StopWords = new ArrayList<String>();
@@ -57,7 +57,7 @@ public class StopWords
 	}
 	
 	
-	
+	//Stores all the words from a text file into an Arraylist
 	public static ArrayList loadFile()
 	{
 		BufferedReader in = null;
@@ -102,7 +102,7 @@ public class StopWords
 	
 	
 	
-	
+	//Remove all the Stop Words from the File.
 	public static String removeStopWords()
 	{
 		int i,j,count=0;
@@ -139,8 +139,8 @@ public class StopWords
 	
 	
 	
-	
-	public static void GenarateFile()
+	//Generate an output text file.
+	public static void genarateFile()
 	{
 		String Output=removeStopWords();
 		BufferedWriter writer = null;
@@ -173,7 +173,7 @@ public class StopWords
 	{
 		//System.out.println(LoadStopWords());
 		//System.out.println(LoadFile());
-		GenarateFile();
+		genarateFile();
 	}
 }
 	
