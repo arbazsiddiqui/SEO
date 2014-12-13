@@ -24,7 +24,7 @@ public class StopWords
 {
 	
 	
-	public static ArrayList LoadStopWords()
+	public static ArrayList loadStopWords()
 	{
 		List<String> StopWords = new ArrayList<String>();
 		int count=0;
@@ -58,7 +58,7 @@ public class StopWords
 	
 	
 	
-	public static ArrayList LoadFile()
+	public static ArrayList loadFile()
 	{
 		BufferedReader in = null;
 		String line = new String();
@@ -103,14 +103,14 @@ public class StopWords
 	
 	
 	
-	public static String Compare()
+	public static String removeStopWords()
 	{
 		int i,j,count=0;
 		List<String> StopWords = new ArrayList<String>();
 		List<String> fileword = new ArrayList<String>();
 		List<String> FinalList = new ArrayList<String>();
-		StopWords=LoadStopWords();
-		fileword=LoadFile();
+		StopWords=loadStopWords();
+		fileword=loadFile();
 		String Output="";
 		/*
 		for(i=0; i<fileword.size(); i++ )
@@ -130,7 +130,7 @@ public class StopWords
 		{
 		    Output += s + " ";
 		}
-		System.out.println(Output);
+		//System.out.println(Output);
 		//System.out.println(a);
 		//System.out.println(count);
 		return Output;
@@ -142,7 +142,7 @@ public class StopWords
 	
 	public static void GenarateFile()
 	{
-		String Output=Compare();
+		String Output=removeStopWords();
 		BufferedWriter writer = null;
 		try
 		{
